@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Botando o Jenkins para rodar seus testes</title>
+
+  <meta name="description" content="Botando o Jenkins para rodar seus testes">
+  <meta name="author" content="Bruno P. Kinoshita">
+
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/reveal.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]> <script src="lib/js/html5shiv.js"></script> <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h3>Botando o Jenkins para rodar seus testes</h3>
+        <p>Bruno P. Kinoshita<br/><small><a href="https://kinoshita.eti.br">https://kinoshita.eti.br</a> &mdash; <a href="https://github.com/kinow/">https://github.com/kinow</a></small></p>
+        <p style="font-size: 60%"><a href="http://www.thedevelopersconference.com.br/tdc/2011/florianopolis/trilha-testes#programacao"></a><br/>
+         Florian&oacute;polis, Brazil 2011</p>
+       </section>
+       <section>
+        <h3>Introdu&ccedil;&atilde;o &mdash; Quem sou eu</h3>
+        <ul>
+          <li>Bruno P. Kinoshita
+            <ul>
+              <li>Engenheiro de Software</li>
+              <li>Utilizo Jenkins em diversas tarefas do dia-a-dia</li>
+              <li>Desenvolvo em Java, PHP, Python, Perl, C, C++, C#, &hellip;</li>
+              <li>Planejo, escrevo, e executo testes</li>
+              <li>Participo de Projetos Open Source</li>
+              <li>tap4j, TestLink, Jenkins TestLink Plug-in, testlink-java-api, FontyPython, BellmanZadeh, CVB, Jenkins CCM Plug-in, &hellip;</li>
+            </ul>
+          </li>
+        </ul>
+        <br/>
+      </section>
+      <section>
+        <h3>#1 &mdash; Testes Unit&aacute;rios</h3>
+        <ul>
+          <li>Testar cada componente do sistema</li>
+          <li>Simples e r&aacute;pido de executar</li>
+          <li>Triggering</li>
+          <li>Executando com master e slaves</li>
+          <li>Usando diferentes plug-ins</li>
+          <li>Integrando com Sonar</li>
+          <li>Concorrente, paralelo, diferentes n&iacute;veis</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Demo</h3>
+      </section>
+      <section>
+        <h3>#2 &mdash; Testes de Integra&ccedil;&atilde;o
+        <ul>
+          <li>Deploy de diferentes aplica&ccedil;&otilde;es e test doubles</li>
+          <li>Gerando massa de dados para os testes</li>
+          <li>Criando diferentes tipos de jobs</li>
+          <li>Medindo cobertura de testes</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Demo</h3>
+      </section>
+      <section>
+        <h3>#3 &mdash; Testes Funcionais</h3>
+        <ul>
+          <li>Rodando seus testes Selenium no Jenkins</li>
+          <li>Jenkins no modo headless</li>
+          <li>Usando Jenkins TestLink Plug-in</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Demo</h3>
+      </section>
+      <section>
+        <h3>Perguntas?</h3>
+      </section>
+      <section>
+        <h3>#4 &mdash; Extras</h3>
+        <ul>
+          <li>Chuck Norris</li>
+          <li>Groovy Console</li>
+          <li>CLI</li>
+          <li>TAP</li>
+          <li>Enviando e-mails</li>
+          <li>Efetuando o merge de resultados de cobertura de testes</li>
+          <li>7 h&aacute;bitos de usu&aacute;rios Jenkins altamente eficazes</li>
+        </ul>
+      </section>
+      <section>
+        <h3>FIM<br/>Perguntas?<br/>Obrigado!</h3>
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+              controls: false,
+              progress: true,
+              history: true,
+              center: true,
+              slideNumber: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        keyboard: true,
+        touch: true,
+        loop: false,
+        fragments: true,
+        dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+  </html>
